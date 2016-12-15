@@ -35,6 +35,27 @@ python -m plueprint "Real World API.md"
 python -m plueprint "Real World API.md" -o "api.pickle"
 ```
 
+### Development
+Fork and clone the repo, then submit pull requests.
+
+#### Setup environment
+```
+cd plueprint
+git submodule init
+git submodule update
+
+virtualenv env
+. env/bin/activate
+pip install -r requirements.txt
+
+python ./setup.py install
+```
+
+#### Running test suite
+```
+python ./test.py
+```
+
 ### Notes
 To suppress warnings about parsed documents, set `plueprint.entities.report_warnings` to `False`.
 
